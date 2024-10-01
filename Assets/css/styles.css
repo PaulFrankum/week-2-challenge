@@ -1,26 +1,15 @@
-<style>
-* {
-
-}
-
-body {
-  margin: 0;
-}
 
 /* Style the header */
 .header {
   background-color: #333333;
   color: #ffffff;
-  @font-face {
-    font-family: myFirstFont;
-    src: url(./assets/mtcorsva.ttf);
-    font-weight:italic;
-  }
-  font-family:  myFirstFont;
+  /* Title should be Monotype Corsiva but not she if it is a licensed Font */
+  font-family:  Arial, Helvetica, sans-serif;
   Font-size:1.5rem;
-  padding: 5px;
+  padding: 1px;
   text-align: center;
 }
+
 /* Style for main body */
 body{
   background-color: aquamarine;
@@ -40,18 +29,20 @@ body{
   box-shadow: 5px 10px grey;
 }
 
-.aboutpm h1{
+.aboutpm h2{
   text-decoration: underline;
   text-align:center;
+  font-size:2rem;
 }
+
 .aboutheader a {
   position: fixed;
   top: 50%;
   left: 50%;
   }
 
-/* Style the top navigation bar*/
 
+/* Style the top navigation bar*/
 .topnav {
   display:flex;
   justify-content: center;
@@ -143,8 +134,8 @@ body{
     width: 100%;
   }
 }
-.contact-form-container {
 
+.contact-form-container {
   background-color: #cccccc;
   padding: 20px;
   border-radius: 15px;
@@ -176,39 +167,6 @@ textarea {
   border: 1px solid #ccc;
 }
 
-button {
-  background-color: #5cb85c;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #4cae4c;
-}
-
-/* Pseudo-elements for Email and Phone Labels */
-/* Add ✉️ and 📞 icons before the labels */
-.phone-label::before{content: "📞";}
-.email-label::before{content: "✉️";}
-
-/* Styling the Terms and Conditions Link */
-.terms-link {
-  color: #007bff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* Add hover and visited states for the link */
-.terms-link:visited {
-  color: purple;
-}
-
-.terms-link:hover {
-  color: #4cae4c;
-}
 .center {
   display: block;
   margin-left: auto;
@@ -216,7 +174,30 @@ button:hover {
   width: 500px;
   font-size: 2rem;
 }
-/* Style the footer */
+
+/* Pseudo-elements for Email,Facebook and Phone Labels */
+/* Add ✉️ and 📞 icons before the labels and Facebook after */
+.phone-label::before{content: "📞";}
+.email-label::before{content: "✉️";}
+h1::after {
+  content:"F"
+}
+
+/* Styling the Terms and Conditions Link On Contact Page*/
+.terms-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* Add visited states for the link on contact Page*/
+.terms-link:visited {
+  color: purple;
+}
+/* Add hover states for the link pn Contact Page */
+.terms-link:hover {
+  color: #4cae4c;
+}
+/* Style the footer for whole website*/
 .footer {
   background-color: #333333;
   Color:White;
