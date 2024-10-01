@@ -1,56 +1,68 @@
 
 /* Style the header */
+:root {
+  --primary-color: aquamarine;
+  --secondary-color: #333333;
+  --third-color: white;
+  --fourth-color: green;
+  --light-grey: #cccccc;
+  --box-shadow-color: grey;
+  --Corp-font: Monotype Corsiva;
+  
+}
+header {
+  position:sticky;
+  top:0%;
+}
+
 .header {
-  background-color: #333333;
-  color: #ffffff;
-  /* Title should be Monotype Corsiva but not she if it is a licensed Font */
+  background-color:var(--secondary-color);
+  color:var(--third-color);
+  /* Title should be Monotype Corsiva but not if it is a licensed Font */
   font-family:  Arial, Helvetica, sans-serif;
   Font-size:1.5rem;
   padding: 1px;
   text-align: center;
 }
+/* to get Facebook link in Header alignment */
+.header1{
+  display:flex;
+  justify-content: center;
+}
 
 /* Style for main body */
 body{
-  background-color: aquamarine;
+  background-color: var(--primary-color);
 }
 
-/* Style for What is Popley Matters*/
+/* Style for What is Popley Matters about box*/
 .aboutpm {
-  display:flexbox;
-  flex-wrap: wrap;
   text-align: justify;
   max-width: 1200px;
   margin:50px auto;
-  background-color: #cccccc;
+  background-color: var(--light-grey);
   padding: 20px;
   border-radius:15px;
-  border: 4px solid green;
-  box-shadow: 5px 10px grey;
+  border: 4px solid  var(--fourth-color);
+  box-shadow: 5px 10px var(--box-shadow-color);
 }
-
+/* Style for About title */
 .aboutpm h2{
   text-decoration: underline;
   text-align:center;
-  font-size:2rem;
+  font: size 2px;rem;
 }
-
-.aboutheader a {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  }
-
 
 /* Style the top navigation bar*/
 .topnav {
   display:flex;
   justify-content: center;
   overflow: hidden;
-  background-color: #333;
+  background-color: var(--secondary-color);
 }
+/* Style for Nav Links */
 .topnav a {
-
+  font-family:  Arial 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
   list-style: none;
   width:100px;
   color: #f2f2f2;
@@ -58,38 +70,36 @@ body{
   padding: 14px 16px;
   text-decoration: none;
 }
-
 /* Change color on hover */
 .topnav a:hover {
   background-color: #ddd;
-  color: #333333;;
+  color: var(--secondary-color);
 }
-
 /* Create three unequal columns that floats next to each other */
 .row{
-  display:flex;
-  justify-content: center ;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
   padding:20px;
   max-width: 1200px;
   margin:50px auto;
-  background-color: #cccccc;
+  background-color:  var(--light-grey);
   border-radius:15px;
-  border: 4px solid green;
-  box-shadow: 5px 10px grey;
-
+  border: 4px solid var(--fourth-color);
+  box-shadow: 5px 10px (--box-shadow-color);
 }
 .column {
   text-align:center;
   padding: 10px;
   margin: auto;
   width: 30%;
-  background-color: #cccccc;
+  background-color:  var(--light-grey);
   border-radius:15px;
-  border: 4px solid green;
-  box-shadow: 5px 10px grey;
+  border: 4px solid var(--fourth-color);
+  box-shadow: 5px 10px (--box-shadow-color);
 
 }
-
 /* Clear floats after the columns */
 .row::after {
   content: "";
@@ -108,80 +118,47 @@ body{
   cursor: pointer;
   border: 1px;
   border-radius: 5dvi;
-  border: 4px solid green;
-  box-shadow: 5px 5px #333333;
+  border: 4px solid var(--fourth-color);
+  box-shadow: 5px 5px var(--secondary-color);
 }
-
+/* turn Button red when Hovering */
 .button:hover { 
   background-color:red;
-
 }
+/* depress when clicking button */
+.button:active {
+  background-color: RED;
+  box-shadow: 0 5px (--box-shadow-color);
+  transform: translateY(4px);
+}    
+/* size box to put Popley Matters Issuesin */
 .displayindesign{
   height:850px;
   width:1200px;
   display: flex;
   margin: 0px auto;
 }
-.button:active {
-  background-color: RED;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}    
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
-}
-
-.contact-form-container {
-  background-color: #cccccc;
-  padding: 20px;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  border: 4px solid green;
-  box-shadow: 5px 10px grey;
-  margin:50px auto;
-}
-
-
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input,
-textarea {
+/* format message area on contact page */
+input, textarea {
   width: 95%;
   padding: 10px;
   margin-top: 5px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: 1px solid #ccc;
 }
-
+/* centre Dropdowns list*/
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 500px;
-  font-size: 2rem;
+  font-size: 1rem;
 }
-
-/* Pseudo-elements for Email,Facebook and Phone Labels */
+/* Pseudo-elements for Email and Phone Labels */
 /* Add ✉️ and 📞 icons before the labels and Facebook after */
 .phone-label::before{content: "📞";}
 .email-label::before{content: "✉️";}
-h1::after {
-  content:"F"
-}
 
 /* Styling the Terms and Conditions Link On Contact Page*/
 .terms-link {
@@ -195,12 +172,28 @@ h1::after {
 }
 /* Add hover states for the link pn Contact Page */
 .terms-link:hover {
-  color: #4cae4c;
+  color: var(--fourth-color);
+}
+/* Formatting for Contact Page Form */
+.contact-form-container {
+  background-color:  var(--light-grey);
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 4px solid var(--fourth-color);
+  box-shadow: 5px 10px (--box-shadow-color);
+  margin:50px auto;
+}
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
 /* Style the footer for whole website*/
 .footer {
-  background-color: #333333;
-  Color:White;
+  background-color: var(--secondary-color);
+  Color:var(--third-color);
   padding: 2px;
   text-align: center;
 }
